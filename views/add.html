@@ -1,0 +1,49 @@
+<!-- Answers -->
+
+{% extends "layout.html" %}
+
+{% block title %}wikistack - add{% endblock %}
+
+{% block content %}
+  <h3>ADD A PAGE</h3>
+  <hr>
+  <form method="POST" action="add/submit">
+    <div class="form-group">
+      <label for="title">page title</label>
+      <input name="title" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="content">page content</label>
+      <textarea name="body" class="form-control" rows="12"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="tags">Tags</label>
+      <input name="tags" class="form-control" placeholder="sparate by comma">
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+{% endblock %}
+
+<!-- {% extends "layout.html" %}
+
+{% block content %}
+<h1>ADD A PAGE</h1>
+<form action='/add/submit' method='post'>
+  <div class="form-group">
+    <label for="exampleInputEmail1">PAGE TITLE</label>
+    <input name="title" class="form-control" id="exampleInputEmail1">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">PAGE CONTENT</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+    <textarea name="body_text" class="form-control" rows="15"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">TAGS</label>
+    <input name="tags" class="form-control" id="exampleInputEmail1">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+{% endblock %} -->

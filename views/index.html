@@ -1,0 +1,29 @@
+<!-- Answer -->
+{% extends "layout.html" %}
+
+{% block content %}
+    <h3>{{title}}</h3>
+    <hr>
+    <ul class="list-unstyled">
+    	{% for page in pages %}
+    		<li>{{ page | page_link }}</li>
+    	{% endfor %}
+    </ul>
+{% endblock %}
+
+<!-- {% extends "layout.html" %}
+
+{% block content %}
+    <h1>BROWSE MY {{title}}</h1>
+{% if docs.length > 0 %}
+  <ul>
+    {% for doc in docs %}
+      <li>{{ doc|page_link }}</li>
+      <p> Tags: {{ doc.tags }}</p>
+    {% endfor %}
+  </ul>
+{% else %}
+  There are no pages. Why don't you <a href='/add'>add one</a>?
+{% endif %}
+{% endblock %}
+ -->
